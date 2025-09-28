@@ -1,7 +1,20 @@
-import React from "react";
+"use client";
+
+import { CircleMinus, CirclePlus } from "lucide-react";
+import React, { useState } from "react";
 
 const items = [
   {
+    id: 100,
+    title: "Bachelor of Oral and Dental Medicine and Surgery (BDS)",
+    startTime: "Sep 2018",
+    endTime: "Jul 2023",
+    place: "Horus University in Egypt",
+    location: "New Damietta, Egypt",
+    details: [],
+  },
+  {
+    id: 3,
     title: "Health Informatics Internship",
     startTime: "Sep 2025",
     endTime: "Present",
@@ -12,6 +25,7 @@ const items = [
     ],
   },
   {
+    id: 2,
     title: "Frontend Web Development Internship",
     startTime: "Jul 2025",
     endTime: "Sep 2025",
@@ -24,6 +38,7 @@ const items = [
     ],
   },
   {
+    id: 1,
     title: "Frontend and Cross Platform Development Scholarship",
     startTime: "Nov 2024",
     endTime: "May 2025",
@@ -34,42 +49,63 @@ const items = [
       "Gained experience in authentication, data handling, and API integration",
     ],
   },
-  {
-    title: "BDS in Oral and Dental Medicine",
-    startTime: "Sep 2018",
-    endTime: "Jul 2023",
-    place: "Horus University in Egypt",
-    location: "New Damietta, Egypt",
-    details: ["GPA: 3.6"],
-  },
 ];
 
 const ExperienceEducation = () => {
+  const [openedItem, setOpenedItem] = useState<null | number>(null);
+  const handleOpenItem = (itemId: number) => {
+    setOpenedItem(openedItem === itemId ? null : itemId);
+  };
+
   return (
-    <section className="space-y-4">
+    <section className="space-y-2">
       <h2 className="text-2xl font-semibold">Experience & Education</h2>
       {items.map((i) => (
-        <div key={i.place} className="space-y-2">
-          <div>
-            <div className="flex justify-between items-center">
-              <h3 className="text-lg font-medium">{i.title}</h3>
-              <p>
-                {i.startTime} - {i.endTime}
-              </p>
-            </div>
-            <p>
-              {i.place} • {i.location}
+        <div
+          key={i.id}
+          onClick={() => {
+            if (i.details.length > 0) handleOpenItem(i.id);
+          }}
+          className={`border rounded p-2 ${
+            i.details.length >= 1 ? "cursor-pointer" : null
+          }`}
+        >
+          <div className="flex justify-between items-center">
+            <h3 className="text-lg font-medium">{i.title}</h3>
+            <p className="hidden lg:block">
+              {i.startTime} - {i.endTime}
             </p>
           </div>
-          <div>
-            {i.details.length == 1 ? (
-              <p className="ms-4">{i.details}</p>
+          <p className="lg:hidden">
+            {i.startTime} - {i.endTime}
+          </p>
+          <p>
+            {i.place} • {i.location}
+          </p>
+          {i.details.length > 0 && (
+            <div className="text-sm mt-2">
+              {openedItem === i.id ? (
+                <p className="flex gap-1 items-center">
+                  <CircleMinus size="14" /> Click for less details!
+                </p>
+              ) : (
+                <p className="flex gap-1 items-center">
+                  <CirclePlus size="14" /> Click for more details!
+                </p>
+              )}
+            </div>
+          )}
+          <div
+            className={`overflow-hidden transition-all duration-250 ease-in-out ${
+              openedItem === i.id ? "max-h-100" : "max-h-0"
+            }`}
+          >
+            {i.details.length == 0 ? null : i.details.length == 1 ? (
+              <p className="mt-2">{i.details[0]}</p>
             ) : (
-              <ol>
+              <ol className="mt-2 list-disc ms-6">
                 {i.details.map((itemDetails, index) => (
-                  <li key={index} className="list-disc ms-8">
-                    {itemDetails}
-                  </li>
+                  <li key={index}>{itemDetails}</li>
                 ))}
               </ol>
             )}

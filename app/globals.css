@@ -14,13 +14,11 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #1e1e1e;
-    --foreground: #f0f0f0;
-    --small-circle: #66ff66;
-    --large-circle: #90ee90;
-  }
+.dark {
+  --background: #1e1e1e;
+  --foreground: #f0f0f0;
+  --small-circle: #66ff66;
+  --large-circle: #90ee90;
 }
 
 body {

@@ -8,31 +8,24 @@ const Contact = () => {
       <p className="ms-12">
         I am open to work! Contact me via{" "}
         <Link
-          href="mailto:abdlrhmn.salama"
-          className="underline underline-offset-2 font-semibold hover:text-foreground/60 transition duration-100"
+          href="mailto:abdlrhmnhlmysalama@gmail.com"
+          className="border-b border-dashed hover:border-solid active:border-solid cursor-pointer"
         >
           email
         </Link>{" "}
         or{" "}
         <Link
           href="https://www.linkedin.com/in/abdelrahmanhsalama/"
-          className="underline underline-offset-2 font-semibold hover:text-foreground/60 transition duration-100"
+          className="border-b border-dashed hover:border-solid active:border-solid cursor-pointer"
         >
           LinkedIn
         </Link>
         , check my profile on{" "}
         <Link
-          href="https://github.com/abdlrhmnhsalama"
-          className="underline underline-offset-2 font-semibold hover:text-foreground/60 transition duration-100"
+          href="https://github.com/abdelrahmanhsalama"
+          className="border-b border-dashed hover:border-solid active:border-solid cursor-pointer"
         >
           GitHub
-        </Link>{" "}
-        or view/download my{" "}
-        <Link
-          href="/abdelrahman-salama.pdf"
-          className="underline underline-offset-2 font-semibold hover:text-foreground/60 transition duration-100"
-        >
-          CV
         </Link>
         .
       </p>

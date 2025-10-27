@@ -59,17 +59,9 @@ const ExperienceEducation = () => {
 
   return (
     <section className="space-y-2">
-      <h2 className="text-2xl font-semibold">Experience & Education</h2>
+      <h2 className="text-2xl font-semimedium">Experience & Education</h2>
       {items.map((i) => (
-        <div
-          key={i.id}
-          onClick={() => {
-            if (i.details.length > 0) handleOpenItem(i.id);
-          }}
-          className={`border rounded p-2 ${
-            i.details.length >= 1 ? "cursor-pointer" : null
-          }`}
-        >
+        <div key={i.id} className="border rounded p-2">
           <div className="flex justify-between items-center">
             <h3 className="text-lg font-medium">{i.title}</h3>
             <p className="hidden lg:block">
@@ -83,16 +75,23 @@ const ExperienceEducation = () => {
             {i.place} • {i.location}
           </p>
           {i.details.length > 0 && (
-            <div className="text-sm mt-2">
-              {openedItem === i.id ? (
-                <p className="flex gap-1 items-center">
-                  <CircleMinus size="14" /> Click for less details!
-                </p>
-              ) : (
-                <p className="flex gap-1 items-center">
-                  <CirclePlus size="14" /> Click for more details!
-                </p>
-              )}
+            <div className="text-sm mt-1">
+              <p
+                className="flex gap-1 items-center cursor-pointer"
+                onClick={() => {
+                  if (i.details.length > 0) handleOpenItem(i.id);
+                }}
+              >
+                {openedItem === i.id ? (
+                  <>
+                    <CircleMinus size="14" /> Click for less details!
+                  </>
+                ) : (
+                  <>
+                    <CirclePlus size="14" /> Click for more details!
+                  </>
+                )}
+              </p>
             </div>
           )}
           <div

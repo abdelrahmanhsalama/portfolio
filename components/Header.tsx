@@ -1,9 +1,11 @@
 import React from "react";
+import ThemeToggler from "./ThemeToggler";
 
 const Header = () => {
   return (
-    <header className="mb-4">
-      <h1 className="text-[2rem] font-medium">Abdelrahman Salama</h1>
+    <header className="flex justify-between items-center">
+      <h1 className="text-4xl font-medium">Abdelrahman Salama</h1>
+      <ThemeToggler />
     </header>
   );
 };

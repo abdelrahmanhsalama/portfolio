@@ -4,20 +4,22 @@ import { CircleMinus, CirclePlus } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
 
-const frontendProjects = [
-  {
-    id: 4,
-    title: "next-dental-emr",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    details: [
-      "A dental electronic medical records, it enables dental teams to manage patients’ records, appointments, and treatments efficiently.",
-      "(!) Currently only the landing page is deployed.",
-    ],
-    github: "https://github.com/abdelrahmanhsalama/next-dental-emr",
-    live: "https://ibtesama-dental.vercel.app/",
-  },
+const projects = [
   {
     id: 3,
+    title: "blog-app",
+    technologies: ["Next.js", "Node.js", "PostgreSQL"],
+    details: [
+      "Full-stack blogging platform.",
+      "Backend REST API built with Node.js/Express handles CRUD operations and input validation.",
+      "Designed normalized PostgreSQL database schema.",
+      "Implemented JWT-based authentication and authorization middleware using Passport.js.",
+      "React/Next.js frontend for API demonstration.",
+    ],
+    github: "https://github.com/abdelrahmanhsalama/node-blog-app",
+  },
+  {
+    id: 2,
     title: "novelnest",
     technologies: [
       "Next.js",
@@ -31,10 +33,9 @@ const frontendProjects = [
       "Includes dedicated book pages, real-time chat, and social networking features.",
     ],
     github: "https://github.com/novelNestRepo/novelnestFrontend",
-    live: "",
   },
   {
-    id: 2,
+    id: 1,
     title: "next-ecommerce",
     technologies: [
       "Next.js",
@@ -44,22 +45,12 @@ const frontendProjects = [
       "Tailwind CSS",
     ],
     details: [
-      "Built an e-commerce platform with product listings, product pages, shopping cart, wishlist, and a checkout flow.",
-      "Optimized API calls for performance and clean state management using Zustand.",
-      "Integrated authentication and protected routes with NextAuth.js.",
+      "E-commerce platform with 50+ product listings, cart persistence, and complete checkout flow.",
+      "Optimized API calls and implemented clean state management using Zustand.",
+      "Integrated NextAuth.js for secure authentication and protected routes.",
     ],
     live: "https://abdelrahman-next-ecommerce.vercel.app/",
     github: "https://github.com/abdelrahmanhsalama/next-ecommerce",
-  },
-  {
-    id: 1,
-    title: "next-blog",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    details: [
-      "A responsive blog viewer that fetches posts from JSONPlaceholder API and displays each in its own page.",
-    ],
-    live: "https://abdelrahman-next-blog.vercel.app/",
-    github: "https://github.com/abdelrahmanhsalama/next-blog",
   },
 ];
 
@@ -72,7 +63,7 @@ const Projects = () => {
   return (
     <section className="space-y-2">
       <h2 className="text-2xl font-semimedium">Projects</h2>
-      {frontendProjects.map((i) => (
+      {projects.map((i) => (
         <div key={i.id} className="border rounded p-2 space-y-1 sm:space-y-0">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <h3 className="text-lg font-medium">{i.title}</h3>
@@ -98,7 +89,7 @@ const Projects = () => {
           </div>
           <p>{i.technologies.join(", ")}</p>
           {i.details.length > 0 && (
-            <div className="text-sm mt-1">
+            <div className="text-sm mt-2">
               <p
                 className="flex gap-1 items-center cursor-pointer"
                 onClick={() => {

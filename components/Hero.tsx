@@ -8,24 +8,50 @@ const Hero = () => {
       id="hero"
     >
       <div className="space-y-4 flex-3">
-        <p className="text-lg sm:text-xl">
-          Health Informatics Specialist by day,
-          <br />
-          Frontend Developer at heart.
-        </p>
+        <p className="text-lg sm:text-xl">Software Engineer</p>
         <p>
-          With over 2 years of experience in frontend development, I built a
-          number of websites that serve different purposes.
+          With over 2 years of experience in frontend development, and currently
+          pivoting to backend developement, I built (and am building) a number
+          of websites that serve different purposes.
         </p>
         <p>
           I have experience with{" "}
-          <span className="border-b border-dashed">HTML</span>,{" "}
-          <span className="border-b border-dashed">CSS</span>,{" "}
-          <span className="border-b border-dashed">JavaScript</span>,{" "}
-          <span className="border-b border-dashed">TypeScript</span>,{" "}
-          <span className="border-b border-dashed">React</span>,{" "}
-          <span className="border-b border-dashed">Next.js</span> and{" "}
-          <span className="border-b border-dashed">SQL</span>.
+          <span className="border-b border-dashed hover:border-solid">
+            HTML
+          </span>
+          ,{" "}
+          <span className="border-b border-dashed hover:border-solid">CSS</span>
+          ,{" "}
+          <span className="border-b border-dashed hover:border-solid">
+            JavaScript
+          </span>
+          ,{" "}
+          <span className="border-b border-dashed hover:border-solid">
+            TypeScript
+          </span>
+          ,{" "}
+          <span className="border-b border-dashed hover:border-solid">
+            Node.js
+          </span>
+          ,{" "}
+          <span className="border-b border-dashed hover:border-solid">
+            Express
+          </span>
+          ,{" "}
+          <span className="border-b border-dashed hover:border-solid">
+            React
+          </span>
+          ,{" "}
+          <span className="border-b border-dashed hover:border-solid">
+            Next.js
+          </span>
+          ,{" "}
+          <span className="border-b border-dashed hover:border-solid">SQL</span>{" "}
+          and{" "}
+          <span className="border-b border-dashed hover:border-solid">
+            Java
+          </span>
+          .
         </p>
         <p>
           Also since I studied both{" "}

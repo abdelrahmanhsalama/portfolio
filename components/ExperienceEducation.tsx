@@ -8,20 +8,21 @@ const items = [
     id: 100,
     title: "Bachelor of Oral and Dental Medicine and Surgery (BDS)",
     startTime: "Sep 2018",
-    endTime: "Jul 2023",
+    endTime: "Oct 2024",
     place: "Horus University in Egypt",
     location: "New Damietta, Egypt",
     details: [],
   },
   {
-    id: 3,
-    title: "Health Informatics Internship",
-    startTime: "Sep 2025",
-    endTime: "Present",
-    place: "Health-Insights",
-    location: "Cairo, Egypt",
+    id: 1,
+    title: "Frontend and Cross Platform Development Scholarship",
+    startTime: "Nov 2024",
+    endTime: "May 2025",
+    place: "Mansoura, Egypt",
+    location: "Information Technology Institute (ITI)",
     details: [
-      "Gained hands-on experience with Electronic Health Records (EHR) systems, including data entry, navigation, and understanding clinical workflows to support healthcare delivery.",
+      "Built cross-platform applications with responsive, accessible UIs using React, Next.js, and React Native.",
+      "Gained experience in additional technologies such as Node.js, SQL, JavaScript testing libraries and programming concepts such as OOP and Design Patterns.",
     ],
   },
   {
@@ -32,21 +33,20 @@ const items = [
     place: "Buguard",
     location: "Cairo, Egypt",
     details: [
-      "Worked on a secure operations dashboard used for managing company workflows.",
-      "Built task management and real-time dashboards for data visualization.",
-      "Designed user-centered UIs ensuring usability for diverse users.",
+      "Contributed to an internal operations dashboard.",
+      "Built a task management app and a dashboard for data visualization for training.",
     ],
   },
   {
-    id: 1,
-    title: "Frontend and Cross Platform Development Scholarship",
-    startTime: "Nov 2024",
-    endTime: "May 2025",
-    place: "Mansoura, Egypt",
-    location: "Information Technology Institute (ITI)",
+    id: 3,
+    title: "Health Informatics Internship",
+    startTime: "Sep 2025",
+    endTime: "Present",
+    place: "Health-Insights",
+    location: "Cairo, Egypt",
     details: [
-      "Trained on building cross-platform apps with responsive and accessible UIs using HTML, CSS, JavaScript, TypeScript, React, Next.js and React Native.",
-      "Gained experience in authentication, data handling, and API integration",
+      "Supported the implementation of MedicaCloudCare (the company’s Electronic Patient Record system) in Egypt Air Hospital, trained hospital staff on how to use the system.",
+      "Gained hands-on knowledge of SQL and Microsoft SQL Server, used for managing clinical data systems.",
     ],
   },
 ];
@@ -75,7 +75,7 @@ const ExperienceEducation = () => {
             {i.place} • {i.location}
           </p>
           {i.details.length > 0 && (
-            <div className="text-sm mt-1">
+            <div className="text-sm mt-2">
               <p
                 className="flex gap-1 items-center cursor-pointer"
                 onClick={() => {

@@ -8,7 +8,7 @@ const Contact = () => {
       <p className="ms-12">
         I am open to work! Contact me via{" "}
         <Link
-          href="mailto:abdlrhmnhlmysalama@gmail.com"
+          href="mailto:AbdelrahmanSalama150@gmail.com"
           className="border-b border-dashed hover:border-solid active:border-solid cursor-pointer"
         >
           email

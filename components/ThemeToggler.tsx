@@ -22,7 +22,7 @@ const ThemeToggler = () => {
           {isDark ? (
             <Sun className="w-4 sm:group-hover:-translate-y-0.5 sm:duration-250" />
           ) : (
-            <Moon className="w-4 sm:group-hover:translate-y-0.5 sm:duration-250" />
+            <Moon className="w-4 sm:group-hover:-translate-y-0.5 sm:duration-250" />
           )}
         </div>
       )}

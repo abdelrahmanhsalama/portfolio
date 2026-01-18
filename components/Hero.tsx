@@ -66,7 +66,7 @@ const Hero = () => {
           alt="Abdelrahman"
           width="500"
           height="500"
-          className="rounded w-[50%] mx-auto md:w-full grayscale hover:grayscale-0 active:grayscale-0 transition duration-200"
+          className="rounded mx-auto w-full grayscale hover:grayscale-0 active:grayscale-0 transition duration-200"
         ></Image>
       </div>
     </section>

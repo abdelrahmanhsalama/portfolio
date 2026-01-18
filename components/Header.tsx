@@ -6,7 +6,7 @@ import { Linkedin, Mail } from "lucide-react";
 const Header = ({ variant }: { variant: string }) => {
   return (
     <header className="flex justify-between items-center">
-      <h1 className="text-4xl font-medium">Abdelrahman Salama</h1>
+      <h1 className="text-2xl sm:text-4xl font-medium">Abdelrahman Salama</h1>
       <div className="flex items-center gap-2">
         <div className="flex items-center gap-1">
           <Link

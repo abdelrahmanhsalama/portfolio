@@ -4,22 +4,9 @@ import { CircleMinus, CirclePlus } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
 
-const projects = [
+const frontendProjects = [
   {
     id: 3,
-    title: "blog-app",
-    technologies: ["Next.js", "Node.js", "PostgreSQL"],
-    details: [
-      "Full-stack blogging platform.",
-      "Backend REST API built with Node.js/Express handles CRUD operations and input validation.",
-      "Designed normalized PostgreSQL database schema.",
-      "Implemented JWT-based authentication and authorization middleware using Passport.js.",
-      "React/Next.js frontend for API demonstration.",
-    ],
-    github: "https://github.com/abdelrahmanhsalama/node-blog-app",
-  },
-  {
-    id: 2,
     title: "novelnest",
     technologies: [
       "Next.js",
@@ -35,6 +22,16 @@ const projects = [
     github: "https://github.com/novelNestRepo/novelnestFrontend",
   },
   {
+    id: 2,
+    title: "next-blog",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    details: [
+      "A blog viewer app built with Next.js, TypeScript, and TailwindCSS for Buguard's internship assessment. The app fetches and displays blog posts from the JSONPlaceholder API, featuring a list of posts and individual post details.",
+    ],
+    live: "https://abdelrahman-next-blog.vercel.app/",
+    github: "https://github.com/abdelrahmanhsalama/next-blog",
+  },
+  {
     id: 1,
     title: "next-ecommerce",
     technologies: [
@@ -45,9 +42,7 @@ const projects = [
       "Tailwind CSS",
     ],
     details: [
-      "E-commerce platform with 50+ product listings, cart persistence, and complete checkout flow.",
-      "Optimized API calls and implemented clean state management using Zustand.",
-      "Integrated NextAuth.js for secure authentication and protected routes.",
+      "An ecommerce app built with Next.js, TypeScript, and TailwindCSS. The app fetches and displays products from the DummyJSON API, featuring individual product pages and a cart and a wishlist feature.",
     ],
     live: "https://abdelrahman-next-ecommerce.vercel.app/",
     github: "https://github.com/abdelrahmanhsalama/next-ecommerce",
@@ -63,7 +58,8 @@ const Projects = () => {
   return (
     <section className="space-y-2">
       <h2 className="text-2xl font-semimedium">Projects</h2>
-      {projects.map((i) => (
+      <h3 className="text-lg">Frontend Projects</h3>
+      {frontendProjects.map((i) => (
         <div key={i.id} className="border rounded p-2 space-y-1 sm:space-y-0">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <h3 className="text-lg font-medium">{i.title}</h3>

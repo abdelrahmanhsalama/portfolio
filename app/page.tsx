@@ -2,16 +2,16 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ExperienceEducation from "@/components/ExperienceEducation";
 import Projects from "@/components/Projects";
-import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="w-[90%] md:w-[75%] lg:w-[60%] mx-auto my-8 space-y-8">
-      <Header />
+    <div className="w-[90%] md:w-[75%] lg:w-[60%] mx-auto py-4 space-y-4">
+      <Header variant="home" />
       <Hero />
       <ExperienceEducation />
       <Projects />
-      <Contact />
-    </main>
+      <Footer />
+    </div>
   );
 }

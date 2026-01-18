@@ -18,18 +18,9 @@ const ThemeToggler = () => {
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >
       {mounted && (
-        <div className="border p-2 rounded sm:border-none sm:p-0">
-          {isDark ? (
-            <Sun className="w-4 sm:group-hover:-translate-y-0.5 sm:duration-250" />
-          ) : (
-            <Moon className="w-4 sm:group-hover:-translate-y-0.5 sm:duration-250" />
-          )}
+        <div className="border size-8 rounded flex justify-center items-center hover:bg-foreground hover:text-background duration-200 cursor-pointer">
+          {isDark ? <Sun className="w-4" /> : <Moon className="w-4" />}
         </div>
-      )}
-      {mounted && (
-        <span className="hidden sm:inline border-b border-dashed group-hover:border-solid cursor-pointer w-max">
-          {isDark ? "Lights on!" : "Lights off!"}
-        </span>
       )}
     </div>
   );
